@@ -1,0 +1,32 @@
+<div class="light-green padding-px10 middle">
+    <p> Enter a username and password, then click Register to create an account.</p>
+    <p> After logging in with that account, the "Dashboard" view will work until you end your browser session.</p>
+  </div>
+
+<div class = "big-div" style="margin-left:20px">
+    <div class = "error-container">
+        <p>{{this.errorMessage}}</p>
+    </div>
+    
+    <div class = "main-container">
+        <div class = "login-container">
+            <mat-form-field class = "form" appearance="fill" >
+                <mat-label>Enter Username</mat-label>       
+                <input matInput [(ngModel)]="username">
+            </mat-form-field>
+
+            <br>
+
+            <mat-form-field class = "form" appearance="fill">
+                <mat-label>Enter Password</mat-label> 
+                <input [(ngModel)]="password" class = "form" matInput placeholder="Enter your password">
+               
+            </mat-form-field>
+        </div>
+        
+        <div class= "button-container">
+            <button  style="margin-right:20px" class="primary-green margin-sides" (click)="login()" mat-raised-button>Log In</button>            
+            <button class="light-green margin-sides" (click)="register()" mat-raised-button>Register</button>            
+        </div>
+    </div>
+</div>

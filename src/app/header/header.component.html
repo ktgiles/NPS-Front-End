@@ -1,0 +1,25 @@
+<mat-toolbar class="primary-green">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon class="gray-light-text">menu</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" class = "gray-light">
+        <button (click)="clickHome()" mat-menu-item  class="gray-light hover-green">
+            <mat-icon>home</mat-icon>
+            Home</button>
+        <button (click)="clickLogin()" mat-menu-item  class="gray-light hover-green">
+            <mat-icon>lock_open</mat-icon>
+            Login</button>
+        <button (click)="clickDash()" mat-menu-item  class="gray-light hover-green">
+            <mat-icon>dashboard</mat-icon>
+            Dashboard</button>
+        <button (click)="clickInfo()" mat-menu-item  class="gray-light hover-green">
+            <mat-icon>info</mat-icon>
+            About This App</button>
+    </mat-menu>
+
+
+    <span class="padding-px5 gray-light-text" >National Parks Tracker</span>
+    
+</mat-toolbar>
+  

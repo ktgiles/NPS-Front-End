@@ -1,0 +1,23 @@
+<div class="light-green padding-px10 middle">
+    <p> Note: The NPS API requires users/developers to refresh their API key login regularly. If parks are not populating on the home page, please contact kaitlin.giles@cgi.com</p>
+  </div>
+
+<div class="margin-px10">
+    <input class="gray-light margin-" matInput placeholder="Search by park name" style="line-height: 28px; margin-left:20px;">
+    <button  style="margin-left:70px;" class="primary-green margin-sides" mat-raised-button>Future Implementation</button>            
+</div>
+
+<div class="container" layout="row" layout-wrap>
+   <div *ngFor="let park of parks">
+        <mat-card class="gray-light square green-border">
+            <div class = "middle">
+                <p class = "title">{{park.fullName}}</p>  
+                <p class = "subtitle">{{park.states}}</p>  
+            </div>
+        
+            <mat-card-actions>
+                <a mat-button class = "light-green center" href={{park.url}} target="_blank">Visit Website</a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
